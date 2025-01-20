@@ -298,7 +298,7 @@ nvidia-curand-cu12==10.3.5.147
 nvidia-cusolver-cu12==11.6.1.9
 nvidia-cusparse-cu12==12.3.1.170
 nvidia-nccl-cu12==2.21.5
-nvidia-nvjitlink-cu12==12.6.85
+nvidia-nvjitlink-cu12==12.4.127
 nvtx==0.2.10
 nx-cugraph-cu12 @ https://pypi.nvidia.com/nx-cugraph-cu12/nx_cugraph_cu12-24.10.0-py3-none-any.whl
 oauth2client==4.1.3
