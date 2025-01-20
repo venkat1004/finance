@@ -216,7 +216,6 @@ from langchain_groq import ChatGroq
 from google.colab import userdata
 # os.environ["GROQ_API_KEY"] = "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"
 os.environ["GROQ_API_KEY"] = "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"
-os.environ["OPENAI_API_KEY"]  = "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"
 
 create_table_query_1 = """
 CREATE TABLE IF NOT EXISTS Bill_Payments (
@@ -297,12 +296,7 @@ conn.close()
 
 print("Data successfully inserted into the Bill DB.")
 
-new_llm = LLM(
-    model="openai/gpt-4o",
-    temperature=0.3,
-    max_tokens=7000,
-    api_key=os.getenv("OPENAI_API_KEY"),
-)
+
 
 from langchain_groq import ChatGroq
 
@@ -314,8 +308,6 @@ llm = ChatGroq(
 
 from langchain_openai import ChatOpenAI
 
-llm_2 = ChatOpenAI(
-    model="gpt-4o-mini", temperature=0
 )
 
 from langchain.agents import (
@@ -1114,7 +1106,7 @@ from langchain_core.prompts import PromptTemplate
 prompt = PromptTemplate.from_template(template)
 
 agent = create_react_agent(
-    llm=llm_2,
+    llm=llm,
     tools=tools,
     prompt=prompt,
     stop_sequence=True,
